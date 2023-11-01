@@ -1,6 +1,5 @@
 {
     "board": "arduino:avr:uno",
     "programmer": "avrisp",
-    "sketch": "photoresistortest/photoresistortest.ino",
-    "port": "/dev/tty.usbmodem1412301"
+    "sketch": "photoresistortest/photoresistortest.ino"
 }
