@@ -1,9 +1,7 @@
 int motorPin1 = 2;
 int motorPin2 = 4;
 
-#define photoPin = A0;
-
-int photoInput = 7;
+int photoPin = A0;
 
 void setup() {
   pinMode(motorPin1, OUTPUT);
@@ -11,15 +9,22 @@ void setup() {
 
   pinMode(photoPin, INPUT);
 
-  digitalWrite(motorPin1, HIGH);
-  digitalWrite(motorPin2, HIGH);
+  Serial.begin(9600);
   }
 
 void loop() {  
   int value = analogRead(photoPin);
+  digitalWrite(motorPin1, HIGH);
+  digitalWrite(motorPin2, HIGH);
 
-  if (value < 10) {
+  if (value < 50) {
     digitalWrite(motorPin1, LOW);
     digitalWrite(motorPin2, LOW);
-    }
+    Serial.println("dark");
+    while(1);
+  }
+  if (value > 50) {
+    Serial.println("light");
+  }
+  delay(1000);
   }
