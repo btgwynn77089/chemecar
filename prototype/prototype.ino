@@ -10,6 +10,7 @@ int motorPin3 = 8;
 int motorPin4 = 12;
 int photoPin = A0; // pin to read photoresistor input
 bool isOn = false; // used in the motor control method
+int seconds = 0;
 
 
 //USE THIS VARIABLE TO CONTROL THE LIGHTS
@@ -55,16 +56,20 @@ void loop() {
 
   if (value < lightcheck) { // check to see if motors should be off
     turnMotors("off");
-    String output = "dark -- ";
+    String output = "dark";
     Serial.println(output); // debug output
     Serial.println(value); // debug output
     while(1); //forever loop to break the cycle, reset process manually for now using arduino reset button (located by the serial port)
   }
   if (value > lightcheck) {
-    String output = "light -- ";
+    String output = "light";
     Serial.println(output); // print light if the motors should be on
     Serial.println(value); //debug ouput
   }
+
+  Serial.println(seconds);
+  Serial.println("");
+  seconds += 1;
   delay(1000); // waits one second, change this value to change how often the photoresistor checks 
   
   }
