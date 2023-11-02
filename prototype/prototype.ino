@@ -1,6 +1,8 @@
 // Nathan Samuell and Benjamin Gwynn
 // UH CHEMECAR 2023
-// currently testing the full motor functionaliy
+// currently testing the full motor functionality
+
+// located at https://github.com/btgwynn77089/chemecar/blob/master/prototype/prototype.ino
 
 
 //instantiation
@@ -13,7 +15,7 @@ bool isOn = false; // used in the motor control method
 int seconds = 0;
 
 
-//USE THIS VARIABLE TO CONTROL THE LIGHTS
+//USE THIS VARIABLE TO CONTROL THE LIGHT input
 int lightcheck = 100; // variable used as light input threshold during testing
 
 
