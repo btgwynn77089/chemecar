@@ -16,7 +16,7 @@ int seconds = 0;
 
 
 //USE THIS VARIABLE TO CONTROL THE LIGHT input
-int lightcheck = 15; // variable used as light input threshold during testing
+int lightcheck = 100; // variable used as light input threshold during testing
 
 
 void setup() {
