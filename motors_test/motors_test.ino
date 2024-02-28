@@ -2,6 +2,8 @@
 //used to test car with wheels actually on it. any insights will be added into the prototype file.
 
 
+//TODO: add stagger time to end to test simultaenous wheel runs
+
 //instantiation
 int motorPin1 = 2; // motor pins
 int motorPin2 = 4;
