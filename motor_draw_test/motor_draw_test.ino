@@ -118,7 +118,7 @@ void loop() {
 
     t = 100;
     
-    Serial.println("Turning on all motors for 3s with a 0.25s time delay in 2s");
+    Serial.println("Turning on all motors for 3s with a 0.1s time delay in 2s");
     delay(2000);
     digitalWrite(motorPin1, HIGH);
     delay(t);
@@ -138,6 +138,6 @@ void loop() {
 
     // Add other motor tests later if needed.
     Serial.println("Motor test will repeat in 10s...");
-    delay(10000);;
+    delay(10000);
 
 }
