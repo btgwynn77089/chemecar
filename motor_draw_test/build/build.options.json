@@ -1,0 +1,10 @@
+{
+  "additionalFiles": "",
+  "builtInToolsFolders": "",
+  "compiler.optimization_flags": "",
+  "customBuildProperties": "build.warn_data_percentage=75",
+  "fqbn": "arduino:avr:uno",
+  "hardwareFolders": "/Users/nathansamuell/Library/Arduino15/packages",
+  "otherLibrariesFolders": "/Users/nathansamuell/Documents/Arduino/libraries",
+  "sketchLocation": "/Users/nathansamuell/Documents/Software-Projects/chemecar/motor_draw_test"
+}

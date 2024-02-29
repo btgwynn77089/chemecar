@@ -1,3 +1,4 @@
+#line 1 "/Users/nathansamuell/Documents/Software-Projects/chemecar/motor_draw_test/motor_draw_test.ino"
 // Nathan Samuell
 // 27 Feb 2024
 // 
@@ -11,6 +12,11 @@ int motorPin2 = 4;
 int motorPin3 = 8;
 int motorPin4 = 12;
 
+#line 14 "/Users/nathansamuell/Documents/Software-Projects/chemecar/motor_draw_test/motor_draw_test.ino"
+void setup();
+#line 28 "/Users/nathansamuell/Documents/Software-Projects/chemecar/motor_draw_test/motor_draw_test.ino"
+void loop();
+#line 14 "/Users/nathansamuell/Documents/Software-Projects/chemecar/motor_draw_test/motor_draw_test.ino"
 void setup() {
     // set motorpins as out
     pinMode(motorPin1, OUTPUT);
@@ -142,3 +148,4 @@ void loop() {
     delay(10000);
 
 }
+
