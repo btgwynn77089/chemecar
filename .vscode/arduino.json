@@ -1,5 +1,5 @@
 {
     "board": "arduino:avr:uno",
     "programmer": "avrisp",
-    "sketch": "photoresistortest/photoresistortest.ino"
+    "sketch": "motor_draw_test/motor_draw_test.ino"
 }

@@ -130,7 +130,7 @@ void loop() {
     delay(t);
     digitalWrite(motorPin4, HIGH);
     Serial.println("All motors on.");
-    delay(t);
+    delay(3000);
     digitalWrite(motorPin1, LOW);
     digitalWrite(motorPin2, LOW);
     digitalWrite(motorPin3, LOW);
