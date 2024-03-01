@@ -138,6 +138,26 @@ void loop() {
     Serial.println("All motors off. Press any key to continue.");
     while (Serial.available() == 0) {}
 
+    t = 10;
+
+    Serial.println("Turning on all motors for 3s with a 0.01s time delay in 2s");
+    delay(2000);
+    digitalWrite(motorPin1, HIGH);
+    delay(t);
+    digitalWrite(motorPin2, HIGH);
+    delay(t);
+    digitalWrite(motorPin3, HIGH);
+    delay(t);
+    digitalWrite(motorPin4, HIGH);
+    Serial.println("All motors on.");
+    delay(3000);
+    digitalWrite(motorPin1, LOW);
+    digitalWrite(motorPin2, LOW);
+    digitalWrite(motorPin3, LOW);
+    digitalWrite(motorPin4, LOW);
+    Serial.println("All motors off. Press any key to continue.");
+    while (Serial.available() == 0) {}
+
     // Add other motor tests later if needed.
     Serial.println("Motor test will repeat in 10s...");
     delay(10000);
