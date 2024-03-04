@@ -23,6 +23,7 @@ void setup() {
     Serial.begin(9600);
     Serial.println("Instantiation complete--press any key to continue.");
     while (Serial.available() == 0) {} // waits forever until the SM has more than 0 bytes to parse
+    Serial.flush();
 
 }
 
@@ -40,6 +41,7 @@ void loop() {
             digitalWrite(motorPin1, LOW);
             Serial.println("Motor 1 off. Press any key to continue");
             while (Serial.available() == 0) {}
+            Serial.flush();
 
         }else if (i==2){ //Motor 2
             digitalWrite(motorPin2, HIGH);
@@ -48,6 +50,7 @@ void loop() {
             digitalWrite(motorPin2, LOW);
             Serial.println("Motor 2 off. Press any key to continue");
             while (Serial.available() == 0) {}
+            Serial.flush();
 
         }else if (i==3){ //Motor 3
             digitalWrite(motorPin3, HIGH);
@@ -56,6 +59,7 @@ void loop() {
             digitalWrite(motorPin3, LOW);
             Serial.println("Motor 3 off. Press any key to continue");
             while (Serial.available() == 0) {}
+            Serial.flush();
 
         }else{             //Motor 4
             digitalWrite(motorPin4, HIGH);
@@ -64,6 +68,7 @@ void loop() {
             digitalWrite(motorPin4, LOW);
             Serial.println("Motor 4 off. Press any key to continue");
             while (Serial.available() == 0) {}
+            Serial.flush();
             
         }}
         
@@ -72,6 +77,7 @@ void loop() {
     //Motor Test 2: Spikes when all motors draw current
     Serial.println("Motor Test 2--Test all motors at once. Press any key to continue.");
     while (Serial.available() == 0) {}
+    Serial.flush();
 
     // Turn on the motors
     Serial.println("Turning on all motors at once for 3s with no time delay in 2 s");
@@ -90,10 +96,12 @@ void loop() {
 
     Serial.println("All motors off. Press any key to continue.");
     while(Serial.available() == 0) {}
+    Serial.flush();
 
     //Motor Test 3: stagger the motor on time
     Serial.println("Motor Test 3a--Turning on all motors with a delay of 0.25 s in between. Press any key to continue.");
     while (Serial.available() == 0) {}
+    Serial.flush();
 
     t = 250;
 
@@ -114,9 +122,11 @@ void loop() {
     digitalWrite(motorPin4, LOW);
     Serial.println("All motors off. Press any key to continue.");
     while (Serial.available() == 0) {}
+    Serial.flush();
 
     Serial.println("Motor Test 3b--Turning on all motors with a delay of 0.1 s in between. Press any key to continue.");
     while (Serial.available() == 0) {}
+    Serial.flush();
 
     t = 100;
     
@@ -137,6 +147,7 @@ void loop() {
     digitalWrite(motorPin4, LOW);
     Serial.println("All motors off. Press any key to continue.");
     while (Serial.available() == 0) {}
+    Serial.flush();
 
     t = 10;
 
@@ -157,6 +168,7 @@ void loop() {
     digitalWrite(motorPin4, LOW);
     Serial.println("All motors off. Press any key to continue.");
     while (Serial.available() == 0) {}
+    Serial.flush();
 
     // Add other motor tests later if needed.
     Serial.println("Motor test will repeat in 10s...");
