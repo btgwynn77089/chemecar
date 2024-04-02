@@ -24,7 +24,7 @@ void setup() {
 
 
   digitalWrite(motorPin1,HIGH);
-  delay(250)
+  delay(1000)
   digitalWrite(motorPin2,HIGH);
   delay(5000);
   
