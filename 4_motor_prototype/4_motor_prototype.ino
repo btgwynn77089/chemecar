@@ -1,14 +1,15 @@
-// Nathan Samuell 
-// 2 Apr 2024
-// 
-// prototype car design with 2 motor
+// Nathan Samuell and Benjamin Gwynn
+// UH CHEMECAR 2023
+// currently testing the full motor functionality
 
-// repo located at https://github.com/btgwynn77089/chemecar/blob/master/prototype/prototype.ino
+// located at https://github.com/btgwynn77089/chemecar/blob/master/prototype/prototype.ino
 
 
 //instantiation
 int motorPin1 = 2; // motor pins
-int motorPin2 = 12;
+int motorPin2 = 4;
+int motorPin3 = 8;
+int motorPin4 = 12;
 int photoPin = A0; // pin to read photoresistor input
 bool isOn = false; // used in the motor control method
 int seconds = 0;
@@ -22,6 +23,8 @@ void setup() {
   //pinmode setup
   pinMode(motorPin1, OUTPUT);
   pinMode(motorPin2, OUTPUT);
+  pinMode(motorPin3, OUTPUT);
+  pinMode(motorPin4, OUTPUT);
   pinMode(photoPin, INPUT);
   Serial.begin(9600); //start serial monitor for monitoring arduino output, can be reached by going to tools > serial monitor
   }
@@ -38,10 +41,14 @@ void turnMotors(String onOrOff) {
   if (isOn == true) {
     digitalWrite(motorPin1, HIGH);
     digitalWrite(motorPin2, HIGH);
+    digitalWrite(motorPin3, HIGH);
+    digitalWrite(motorPin4, HIGH);
   }
   else {
     digitalWrite(motorPin1, LOW);
     digitalWrite(motorPin2, LOW);
+    digitalWrite(motorPin3, LOW);
+    digitalWrite(motorPin4, LOW);
   }
 }
 
