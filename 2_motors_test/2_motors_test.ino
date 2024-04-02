@@ -5,7 +5,7 @@
 
 //instantiation
 int motorPin1 = 2; // motor pins
-int motorPin2 = 12;
+int motorPin2 = 4;
 
 void setup() {
   // set motorpins as out
