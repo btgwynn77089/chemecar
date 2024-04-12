@@ -10,6 +10,7 @@
 int motorPin1 = 2; // motor pins
 int motorPin2 = 12;
 int photoPin = A0; // pin to read photoresistor input
+int buttonPin = 7; // pin for emergency stop button
 bool isOn = false; // used in the motor control method
 int seconds = 0;
 
@@ -23,6 +24,7 @@ void setup() {
   pinMode(motorPin1, OUTPUT);
   pinMode(motorPin2, OUTPUT);
   pinMode(photoPin, INPUT);
+  pinMode(buttonPin, INPUT);
   Serial.begin(9600); //start serial monitor for monitoring arduino output, can be reached by going to tools > serial monitor
   }
 
@@ -47,7 +49,15 @@ void turnMotors(String onOrOff) {
 
 void loop() {  
   int value = analogRead(photoPin); // read photoresistor value
+  int buttonStatus = digitalRead(buttonPin);
   turnMotors("on"); // turn the motors on by default
+  if (buttonStatus == HIGH) {
+    turnMotors("off");
+    while (true) {
+      Serial.println("emergency stop activated, press reset button to override");
+      delay(500);
+    } //infinite loop to stop motors
+  }
 
   if (value < lightcheck) { // check to see if motors should be off
     turnMotors("off");
@@ -65,6 +75,6 @@ void loop() {
   Serial.println(seconds);
   Serial.println("");
   seconds += 1;
-  delay(1000); // waits one second, change this value to change how often the photoresistor checks 
+  delay(750); // change this value to change how often the photoresistor checks 
   
   }

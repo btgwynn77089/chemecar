@@ -1,6 +1,6 @@
 {
     "board": "arduino:avr:uno",
     "programmer": "avrisp",
-    "sketch": "motor_draw_test/motor_draw_test.ino",
+    "sketch": "prototype/prototype.ino",
     "port": "/dev/ttyACM0"
 }
